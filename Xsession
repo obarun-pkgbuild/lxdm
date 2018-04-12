@@ -67,8 +67,5 @@ if [ -x "$script" -a ! -d "$script" ]; then
 fi
 
 echo "X session wrapper complete, running session $LXSESSION"
-if [ -x /usr/bin/ck-launch-session ]; then
-	exec ck-launch-session $LXSESSION
-else
-	exec $LXSESSION
-fi
+exec $LXSESSION
+
